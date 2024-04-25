@@ -12,8 +12,13 @@ class MultiValueFieldTest_DataObject extends \SilverStripe\ORM\DataObject implem
         'MVField' => 'MultiValueField'
     );
 
-    public function write($showDebug = false, $forceInsert = false, $forceWrite = false, $writeComponents = false)
-    {
-        parent::write($showDebug, $forceInsert, $forceWrite, $writeComponents);
+    public function write(
+        $showDebug = false,
+        $forceInsert = false,
+        $forceWrite = false,
+        $writeComponents = false,
+        bool $skipValidation = false
+    ) {
+        parent::write($showDebug, $forceInsert, $forceWrite, $writeComponents, $skipValidation);
     }
 }
